@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  LoginViewController.swift
 //  Chatty
 //
 //  Created by Oleg Krikun on 30.03.2021.
@@ -7,25 +7,33 @@
 
 import SwiftUI
 
-class SignUpViewController: UIViewController {
+class LoginViewController: UIViewController {
     
-    private let welcomeLabel = UILabel(text: "Hello! Hallo! Nihao!", font: .avenir26())
+    private let welcomeLabel = UILabel(text: "Welcome back!", font: .avenir26())
+    
+    private let loginWithLabel = UILabel(text: "Login with")
+    private let googleButton = UIButton(title: "Google",
+                                    titleColor: .black,
+                                    backgroundColor: .white,
+                                    isShadow: true)
+    
+    private let orLabel = UILabel(text: "or")
     
     private let emailLabel = UILabel(text: "E-mail")
-    private let passwordLabel = UILabel(text: "Password")
-    private let alreadyOnboardLabel = UILabel(text: "Already onboard?")
-    
     private let emailTextField = OneLineTextField(font: .avenir20())
+    
+    private let passwordLabel = UILabel(text: "Password")
     private let passwordTextField = OneLineTextField(font: .avenir20())
     
-    private let signUpButton = UIButton(title: "Sign Up",
-                                        titleColor: .white,
-                                        backgroundColor: .buttonBlack(),
-                                        isShadow: false,
-                                        cornerRadius: 4)
-    private let loginButton: UIButton = {
+    private let loginButton = UIButton(title: "Login",
+                                    titleColor: .white,
+                                    backgroundColor: .buttonBlack(),
+                                    isShadow: false)
+    
+    private let needAnAccountLabel = UILabel(text: "Need an account?")
+    private let signUpButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
         return button
@@ -39,8 +47,10 @@ class SignUpViewController: UIViewController {
 }
 
 // MARK: Setup constrains
-extension SignUpViewController {
+extension LoginViewController {
     private func setupConstrains() {
+        let loginWithView = ButtonFormView(label: loginWithLabel,
+                                           button: googleButton)
         let emailStackView = UIStackView(arrangedSubviews: [
                                             emailLabel,
                                             emailTextField],
@@ -51,14 +61,21 @@ extension SignUpViewController {
                                                 passwordTextField],
                                             axis: .vertical,
                                             spacing: 0)
-        signUpButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        loginButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        let mainStackView = UIStackView(arrangedSubviews: [emailStackView, passwordStackView, signUpButton], axis: .vertical, spacing: 40)
-        
-        loginButton.contentHorizontalAlignment = .leading
-        let bottomStackView = UIStackView(arrangedSubviews: [
-                                            alreadyOnboardLabel,
+        let mainStackView = UIStackView(arrangedSubviews: [
+                                            loginWithView,
+                                            emailStackView,
+                                            orLabel,
+                                            passwordStackView,
                                             loginButton],
+                                        axis: .vertical,
+                                        spacing: 40)
+        
+        signUpButton.contentHorizontalAlignment = .leading
+        let bottomStackView = UIStackView(arrangedSubviews: [
+                                            needAnAccountLabel,
+                                            signUpButton],
                                           axis: .horizontal,
                                           spacing: 10)
         bottomStackView.alignment = .firstBaseline
@@ -72,14 +89,13 @@ extension SignUpViewController {
         view.addSubview(bottomStackView)
         
         NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor,
-                                              constant: 160),
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
             welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
             mainStackView.topAnchor.constraint(equalTo: welcomeLabel.topAnchor,
-                                               constant: 160),
+                                               constant: 120),
             mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                    constant: 40),
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
@@ -99,16 +115,16 @@ extension SignUpViewController {
 }
 
 //MARK: - SwiftUI for Canvas
-struct SignUpVCProvider: PreviewProvider {
+struct LoginVCProvider: PreviewProvider {
     static var previews: some View {
         ContainerView().edgesIgnoringSafeArea(.all)
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        let signUpViewContoller = SignUpViewController()
+        let loginViewContoller = LoginViewController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
-            return signUpViewContoller
+            return loginViewContoller
         }
         
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {

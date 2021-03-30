@@ -10,7 +10,8 @@
 		730BE9B226122D4100F13A74 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9B126122D4100F13A74 /* UIFont + Extension.swift */; };
 		730BE9B526122E3600F13A74 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9B426122E3600F13A74 /* UIColor + Extension.swift */; };
 		730BE9BB261231B700F13A74 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9BA261231B700F13A74 /* UILabel + Extension.swift */; };
-		730BE9C6261242DE00F13A74 /* ButtonFormVirew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9C5261242DE00F13A74 /* ButtonFormVirew.swift */; };
+		730BE9C6261242DE00F13A74 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9C5261242DE00F13A74 /* ButtonFormView.swift */; };
+		731B3C9026137330006E1A66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B3C8F26137330006E1A66 /* LoginViewController.swift */; };
 		736C7BD22612297A0060346C /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7BD12612297A0060346C /* UIButton + Extension.swift */; };
 		737FDBB326135CD0008F3519 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FDBB226135CD0008F3519 /* SignUpViewController.swift */; };
 		73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7C21626124A340008EF74 /* UIStackView + Extension.swift */; };
@@ -26,7 +27,8 @@
 		730BE9B126122D4100F13A74 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		730BE9B426122E3600F13A74 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		730BE9BA261231B700F13A74 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
-		730BE9C5261242DE00F13A74 /* ButtonFormVirew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormVirew.swift; sourceTree = "<group>"; };
+		730BE9C5261242DE00F13A74 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		731B3C8F26137330006E1A66 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		736C7BD12612297A0060346C /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
 		737FDBB226135CD0008F3519 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		73D7C21626124A340008EF74 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
@@ -66,7 +68,7 @@
 		730BE9BF26123D7900F13A74 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				730BE9C5261242DE00F13A74 /* ButtonFormVirew.swift */,
+				730BE9C5261242DE00F13A74 /* ButtonFormView.swift */,
 				73F1A5FA2613618F00C40FB8 /* OneLineTextField.swift */,
 				730BE9BD26123D6B00F13A74 /* UIKit */,
 			);
@@ -113,6 +115,7 @@
 				730BE9C126123D9300F13A74 /* Support files */,
 				73EBF6C9260B5B140041DD07 /* AuthViewController.swift */,
 				737FDBB226135CD0008F3519 /* SignUpViewController.swift */,
+				731B3C8F26137330006E1A66 /* LoginViewController.swift */,
 				730BE9BF26123D7900F13A74 /* Extensions */,
 				730BE9C326123DA000F13A74 /* Resource */,
 				73EBF6D0260B5B160041DD07 /* LaunchScreen.storyboard */,
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731B3C9026137330006E1A66 /* LoginViewController.swift in Sources */,
 				730BE9B526122E3600F13A74 /* UIColor + Extension.swift in Sources */,
 				736C7BD22612297A0060346C /* UIButton + Extension.swift in Sources */,
 				73EBF6CA260B5B140041DD07 /* AuthViewController.swift in Sources */,
@@ -196,7 +200,7 @@
 				737FDBB326135CD0008F3519 /* SignUpViewController.swift in Sources */,
 				73EBF6C6260B5B140041DD07 /* AppDelegate.swift in Sources */,
 				73F1A5FB2613618F00C40FB8 /* OneLineTextField.swift in Sources */,
-				730BE9C6261242DE00F13A74 /* ButtonFormVirew.swift in Sources */,
+				730BE9C6261242DE00F13A74 /* ButtonFormView.swift in Sources */,
 				73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */,
 				73EBF6C8260B5B140041DD07 /* SceneDelegate.swift in Sources */,
 				730BE9B226122D4100F13A74 /* UIFont + Extension.swift in Sources */,
