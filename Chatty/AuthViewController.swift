@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-class AuthVCProvider: UIViewController {
+class AuthViewController: UIViewController {
  
-    private let logoLabel = UILabel(text: "Chatty", font: .avenir32(), textColor: .black)
+    private let logoLabel = UILabel(text: "Chatty",
+                                    font: .avenir32(),
+                                    textColor: .black)
+    
     private let googleLabel = UILabel(text: "Get started with")
     private let emailLabel = UILabel(text: "Or sign up with")
     private let loginLabel = UILabel(text: "Already onboard?")
@@ -27,21 +30,28 @@ class AuthVCProvider: UIViewController {
                                     backgroundColor: .white,
                                     isShadow: true)
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupConstrains()
         view.backgroundColor = .white
     }
-    
+}
+
+// MARK: Setup constrains
+extension AuthViewController {
     private func setupConstrains() {
         logoLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let googleView = ButtonFormVirew(label: googleLabel, button: googleButton)
-        let emailView = ButtonFormVirew(label: emailLabel, button: emailButton)
-        let loginView = ButtonFormVirew(label: loginLabel, button: loginButton)
+        let googleView = ButtonFormVirew(label: googleLabel,
+                                         button: googleButton)
+        let emailView = ButtonFormVirew(label: emailLabel,
+                                        button: emailButton)
+        let loginView = ButtonFormVirew(label: loginLabel,
+                                        button: loginButton)
         
-        let stackView = UIStackView(arrangedSubviews: [googleView, emailView, loginView], axis: .vertical, spacing: 32)
+        let stackView = UIStackView(arrangedSubviews: [googleView, emailView, loginView],
+                                    axis: .vertical,
+                                    spacing: 32)
         stackView.translatesAutoresizingMaskIntoConstraints = false
   
         view.addSubview(logoLabel)
@@ -53,25 +63,27 @@ class AuthVCProvider: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: logoLabel.bottomAnchor, constant: 60),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
+            stackView.topAnchor.constraint(equalTo: logoLabel.bottomAnchor,
+                                           constant: 60),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                               constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                constant: -40)
         ])
     }
 }
 
-
 //MARK: - SwiftUI for Canvas
-struct ViewControllerProvider: PreviewProvider {
+struct AuthVCProvider: PreviewProvider {
     static var previews: some View {
         ContainerView().edgesIgnoringSafeArea(.all)
     }
     
     struct ContainerView: UIViewControllerRepresentable {
-        let viewContoller = AuthVCProvider()
+        let authViewContoller = AuthViewController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
-            return viewContoller
+            return authViewContoller
         }
         
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {

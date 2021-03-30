@@ -12,12 +12,14 @@
 		730BE9BB261231B700F13A74 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9BA261231B700F13A74 /* UILabel + Extension.swift */; };
 		730BE9C6261242DE00F13A74 /* ButtonFormVirew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9C5261242DE00F13A74 /* ButtonFormVirew.swift */; };
 		736C7BD22612297A0060346C /* UIButton + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736C7BD12612297A0060346C /* UIButton + Extension.swift */; };
+		737FDBB326135CD0008F3519 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737FDBB226135CD0008F3519 /* SignUpViewController.swift */; };
 		73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7C21626124A340008EF74 /* UIStackView + Extension.swift */; };
 		73EBF6C6260B5B140041DD07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C5260B5B140041DD07 /* AppDelegate.swift */; };
 		73EBF6C8260B5B140041DD07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C7260B5B140041DD07 /* SceneDelegate.swift */; };
-		73EBF6CA260B5B140041DD07 /* AuthVCProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C9260B5B140041DD07 /* AuthVCProvider.swift */; };
+		73EBF6CA260B5B140041DD07 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C9260B5B140041DD07 /* AuthViewController.swift */; };
 		73EBF6CF260B5B160041DD07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73EBF6CE260B5B160041DD07 /* Assets.xcassets */; };
 		73EBF6D2260B5B160041DD07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73EBF6D0260B5B160041DD07 /* LaunchScreen.storyboard */; };
+		73F1A5FB2613618F00C40FB8 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F1A5FA2613618F00C40FB8 /* OneLineTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,14 +28,16 @@
 		730BE9BA261231B700F13A74 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		730BE9C5261242DE00F13A74 /* ButtonFormVirew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormVirew.swift; sourceTree = "<group>"; };
 		736C7BD12612297A0060346C /* UIButton + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extension.swift"; sourceTree = "<group>"; };
+		737FDBB226135CD0008F3519 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		73D7C21626124A340008EF74 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		73EBF6C2260B5B140041DD07 /* Chatty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EBF6C5260B5B140041DD07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73EBF6C7260B5B140041DD07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73EBF6C9260B5B140041DD07 /* AuthVCProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVCProvider.swift; sourceTree = "<group>"; };
+		73EBF6C9260B5B140041DD07 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		73EBF6CE260B5B160041DD07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73EBF6D1260B5B160041DD07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73EBF6D3260B5B160041DD07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73F1A5FA2613618F00C40FB8 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +63,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		730BE9BF26123D7900F13A74 /* Extension */ = {
+		730BE9BF26123D7900F13A74 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				730BE9C5261242DE00F13A74 /* ButtonFormVirew.swift */,
+				73F1A5FA2613618F00C40FB8 /* OneLineTextField.swift */,
 				730BE9BD26123D6B00F13A74 /* UIKit */,
 			);
-			path = Extension;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		730BE9C126123D9300F13A74 /* Support files */ = {
@@ -106,8 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				730BE9C126123D9300F13A74 /* Support files */,
-				73EBF6C9260B5B140041DD07 /* AuthVCProvider.swift */,
-				730BE9BF26123D7900F13A74 /* Extension */,
+				73EBF6C9260B5B140041DD07 /* AuthViewController.swift */,
+				737FDBB226135CD0008F3519 /* SignUpViewController.swift */,
+				730BE9BF26123D7900F13A74 /* Extensions */,
 				730BE9C326123DA000F13A74 /* Resource */,
 				73EBF6D0260B5B160041DD07 /* LaunchScreen.storyboard */,
 			);
@@ -185,9 +191,11 @@
 			files = (
 				730BE9B526122E3600F13A74 /* UIColor + Extension.swift in Sources */,
 				736C7BD22612297A0060346C /* UIButton + Extension.swift in Sources */,
-				73EBF6CA260B5B140041DD07 /* AuthVCProvider.swift in Sources */,
+				73EBF6CA260B5B140041DD07 /* AuthViewController.swift in Sources */,
 				730BE9BB261231B700F13A74 /* UILabel + Extension.swift in Sources */,
+				737FDBB326135CD0008F3519 /* SignUpViewController.swift in Sources */,
 				73EBF6C6260B5B140041DD07 /* AppDelegate.swift in Sources */,
+				73F1A5FB2613618F00C40FB8 /* OneLineTextField.swift in Sources */,
 				730BE9C6261242DE00F13A74 /* ButtonFormVirew.swift in Sources */,
 				73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */,
 				73EBF6C8260B5B140041DD07 /* SceneDelegate.swift in Sources */,
