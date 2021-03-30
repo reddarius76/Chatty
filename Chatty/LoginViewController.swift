@@ -94,8 +94,8 @@ extension LoginViewController {
         ])
         
         NSLayoutConstraint.activate([
-            mainStackView.topAnchor.constraint(equalTo: welcomeLabel.topAnchor,
-                                               constant: 120),
+            mainStackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor,
+                                               constant: 64),
             mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
                                                    constant: 40),
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
