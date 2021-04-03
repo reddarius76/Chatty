@@ -16,6 +16,7 @@
 		730BE9C6261242DE00F13A74 /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730BE9C5261242DE00F13A74 /* ButtonFormView.swift */; };
 		731B3C9026137330006E1A66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731B3C8F26137330006E1A66 /* LoginViewController.swift */; };
 		732092342618664B00BB19C2 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732092332618664B00BB19C2 /* SectionHeader.swift */; };
+		736368672618D70000AC23C0 /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736368662618D70000AC23C0 /* ChatRequestViewController.swift */; };
 		7366CA8726138A2700F7F02C /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366CA8626138A2700F7F02C /* SetupProfileViewController.swift */; };
 		7366CA8A26138BD600F7F02C /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366CA8926138BD600F7F02C /* AddPhotoView.swift */; };
 		7366CA8E26139C4500F7F02C /* UISegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366CA8D26139C4500F7F02C /* UISegmentedControl + Extension.swift */; };
@@ -35,6 +36,7 @@
 		73A978B12618C82800A64E44 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A978B02618C82800A64E44 /* InsertableTextField.swift */; };
 		73A978B42618D41B00A64E44 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A978B32618D41B00A64E44 /* UIImageView + Extension.swift */; };
 		73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7C21626124A340008EF74 /* UIStackView + Extension.swift */; };
+		73DB784A261908A900CFCB62 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DB7849261908A900CFCB62 /* UIView + Extension.swift */; };
 		73EBF6C6260B5B140041DD07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C5260B5B140041DD07 /* AppDelegate.swift */; };
 		73EBF6C8260B5B140041DD07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C7260B5B140041DD07 /* SceneDelegate.swift */; };
 		73EBF6CA260B5B140041DD07 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C9260B5B140041DD07 /* AuthViewController.swift */; };
@@ -55,6 +57,7 @@
 		730BE9C5261242DE00F13A74 /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		731B3C8F26137330006E1A66 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		732092332618664B00BB19C2 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		736368662618D70000AC23C0 /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 		7366CA8626138A2700F7F02C /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		7366CA8926138BD600F7F02C /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 		7366CA8D26139C4500F7F02C /* UISegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl + Extension.swift"; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		73A978B02618C82800A64E44 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		73A978B32618D41B00A64E44 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		73D7C21626124A340008EF74 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		73DB7849261908A900CFCB62 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		73EBF6C2260B5B140041DD07 /* Chatty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EBF6C5260B5B140041DD07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73EBF6C7260B5B140041DD07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				730BE9BA261231B700F13A74 /* UILabel + Extension.swift */,
 				730BE9B426122E3600F13A74 /* UIColor + Extension.swift */,
 				730882F52618939000D8479B /* UIViewController + Extension.swift */,
+				73DB7849261908A900CFCB62 /* UIView + Extension.swift */,
 				7366CA8D26139C4500F7F02C /* UISegmentedControl + Extension.swift */,
 				73A978B32618D41B00A64E44 /* UIImageView + Extension.swift */,
 				730BE9B126122D4100F13A74 /* UIFont + Extension.swift */,
@@ -172,6 +177,7 @@
 				737A939B26170A64008A9CEE /* ConversationViewController.swift */,
 				737A93A426170EDA008A9CEE /* PeopleViewController.swift */,
 				73A978AD2618BA2F00A64E44 /* ProfileViewController.swift */,
+				736368662618D70000AC23C0 /* ChatRequestViewController.swift */,
 				73F60448261872E700593B2E /* Header */,
 				737A93B62617659C008A9CEE /* Cell */,
 			);
@@ -317,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				736368672618D70000AC23C0 /* ChatRequestViewController.swift in Sources */,
 				730882F02618751700D8479B /* User.swift in Sources */,
 				731B3C9026137330006E1A66 /* LoginViewController.swift in Sources */,
 				730BE9B526122E3600F13A74 /* UIColor + Extension.swift in Sources */,
@@ -342,6 +349,7 @@
 				73A1ECD9261853CC008F8B8E /* WaitingChatCell.swift in Sources */,
 				7366CA8A26138BD600F7F02C /* AddPhotoView.swift in Sources */,
 				73A978B42618D41B00A64E44 /* UIImageView + Extension.swift in Sources */,
+				73DB784A261908A900CFCB62 /* UIView + Extension.swift in Sources */,
 				730BE9C6261242DE00F13A74 /* ButtonFormView.swift in Sources */,
 				73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */,
 				732092342618664B00BB19C2 /* SectionHeader.swift in Sources */,
