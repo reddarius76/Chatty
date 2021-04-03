@@ -7,5 +7,5 @@
 
 protocol ConfiguringCell {
     static var reuseId: String { get }
-    func configure(with value: MChat)
+    func configure<U: Hashable>(with value: U)
 }

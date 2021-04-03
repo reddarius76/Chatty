@@ -1,5 +1,5 @@
 //
-//  ListViewController.swift
+//  ConversationViewController.swift
 //  Chatty
 //
 //  Created by Oleg Krikun on 02.04.2021.
@@ -7,25 +7,10 @@
 
 import SwiftUI
 
-struct MChat: Hashable, Decodable {
-    var userName: String
-    var userImageString: String
-    var lastMessage: String
-    var id: Int
+class ConversationViewController: UIViewController {
     
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
-    }
-    
-    static func == (lhs: MChat, rhs: MChat) -> Bool {
-        return lhs.id == rhs.id
-    }
-}
-
-class ListViewController: UIViewController {
-    
-    let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json")
-    let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json")
+    private let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json")
+    private let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json")
     
     enum Section: Int, CaseIterable {
         case waitingChats, activeChats
@@ -39,8 +24,8 @@ class ListViewController: UIViewController {
         }
     }
     
-    var collectionView: UICollectionView!
-    var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
+    private var collectionView: UICollectionView!
+    private var dataSource: UICollectionViewDiffableDataSource<Section, MChat>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +45,7 @@ class ListViewController: UIViewController {
         
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
         collectionView.register(WaitingChatCell.self,
-                                forCellWithReuseIdentifier: WaitingChatCell .reuseId)
+                                forCellWithReuseIdentifier: WaitingChatCell.reuseId)
         collectionView.register(ActiveChatCell.self,
                                 forCellWithReuseIdentifier: ActiveChatCell.reuseId)
     }
@@ -86,23 +71,15 @@ class ListViewController: UIViewController {
 }
 
 //MARK: - Data Source
-extension ListViewController {
-    private func configure<T: ConfiguringCell>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseId, for: indexPath) as? T else {
-            fatalError("Unable to dequeue \(cellType)")
-        }
-        cell.configure(with: value)
-        return cell
-    }
-    
+extension ConversationViewController {
     private func setupDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, MChat>(collectionView: collectionView, cellProvider: { [weak self] (collectionView, indexPath, chat) -> UICollectionViewCell? in
             guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section") }
             switch section {
             case .waitingChats:
-                return self?.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
+                return self?.configure(collectionView: collectionView, cellType: WaitingChatCell.self, with: chat, for: indexPath)
             case .activeChats:
-                return self?.configure(cellType: ActiveChatCell.self, with: chat, for: indexPath)
+                return self?.configure(collectionView: collectionView, cellType: ActiveChatCell.self, with: chat, for: indexPath)
             }
         })
         
@@ -122,7 +99,7 @@ extension ListViewController {
 }
 
 //MARK: - Setup Layout
-extension ListViewController {
+extension ConversationViewController {
     private func setupCompositionalLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             guard let section = Section(rawValue: sectionIndex) else { fatalError("Unknown section") }
@@ -191,14 +168,14 @@ extension ListViewController {
 }
 
 //MARK: - UISearchBarDelegate
-extension ListViewController: UISearchBarDelegate {
+extension ConversationViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }
 }
 
 //MARK: - SwiftUI for Canvas
-struct ListVCProvider: PreviewProvider {
+struct ConversationVCProvider: PreviewProvider {
     static var previews: some View {
         ContainerView().edgesIgnoringSafeArea(.all)
     }

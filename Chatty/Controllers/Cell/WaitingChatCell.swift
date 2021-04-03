@@ -10,9 +10,12 @@ import SwiftUI
 class WaitingChatCell: UICollectionViewCell, ConfiguringCell {
     static var reuseId = "WaitingChatCell"
     
-    let friendImageView = UIImageView()
+    private let friendImageView = UIImageView()
     
-    func configure(with value: MChat) {
+    func configure<U>(with value: U) where U : Hashable {
+        guard let value = value as? MChat else {
+            fatalError("Unknown U.Type for configure WaitingChatCell")
+        }
         friendImageView.image = UIImage(systemName: value.userImageString)?.withTintColor(UIColor.systemBlue, renderingMode: .alwaysOriginal)
         friendImageView.contentMode = .scaleAspectFit
     }
@@ -39,10 +42,10 @@ extension WaitingChatCell {
         addSubview(friendImageView)
         
         NSLayoutConstraint.activate([
-            friendImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            friendImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            friendImageView.heightAnchor.constraint(equalToConstant: 78),
-            friendImageView.widthAnchor.constraint(equalToConstant: 78)
+            friendImageView.topAnchor.constraint(equalTo: self.topAnchor),
+            friendImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            friendImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            friendImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
 }

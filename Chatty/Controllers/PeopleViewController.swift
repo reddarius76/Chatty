@@ -8,10 +8,42 @@
 import SwiftUI
 
 class PeopleViewController: UIViewController {
+    
+    private let users = Bundle.main.decode([User].self, from: "users.json")
+    
+    enum Section: Int, CaseIterable {
+        case users
+        func description(usersCount: Int) -> String {
+            switch self {
+            case .users:
+                return "\(usersCount) people nearby "
+            }
+        }
+    }
+    
+    private var collectionView: UICollectionView!
+    private var dataSource: UICollectionViewDiffableDataSource<Section, User>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSearchBar()
         view.backgroundColor = .mainWhite()
+        
+        setupCollectionView()
+        setupSearchBar()
+        setupDataSource()
+        reloadData()
+    }
+    
+    private func setupCollectionView() {
+        collectionView = UICollectionView(frame: view.bounds,
+                                          collectionViewLayout: setupCompositionalLayout())
+        collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionView.backgroundColor = .mainWhite()
+        view.addSubview(collectionView)
+        
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseId)
+        collectionView.register(UserCell.self,
+                                forCellWithReuseIdentifier: UserCell.reuseId)
     }
     
     private func setupSearchBar() {
@@ -23,6 +55,93 @@ class PeopleViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
+    }
+    
+    private func reloadData() {
+        var snapshot = NSDiffableDataSourceSnapshot<Section, User>()
+        snapshot.appendSections([.users])
+        snapshot.appendItems(users, toSection: .users)
+        dataSource?.apply(snapshot, animatingDifferences: true)
+    }
+}
+
+//MARK: - Data Source
+extension PeopleViewController {
+    private func setupDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, User>(collectionView: collectionView, cellProvider: { [weak self] (collectionView, indexPath, user) -> UICollectionViewCell? in
+            guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section") }
+            switch section {
+            case .users:
+                return self?.configure(collectionView: collectionView, cellType: UserCell.self, with: user, for: indexPath)
+            }
+        })
+        
+        dataSource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseId, for: indexPath) as? SectionHeader else {
+                fatalError("Can't create new section header!")
+            }
+            guard let section = Section(rawValue: indexPath.section) else {
+                fatalError("Unknown section kind!")
+            }
+            let users = self?.dataSource.snapshot().itemIdentifiers(inSection: .users)
+            sectionHeader.configure(text: section.description(usersCount: users?.count ?? 0),
+                                    font: .systemFont(ofSize: 32, weight: .light),
+                                    textColor: .label)
+            return sectionHeader
+        }
+    }
+    
+    
+}
+
+//MARK: - Setup Layout
+extension PeopleViewController {
+    private func setupCompositionalLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+            guard let section = Section(rawValue: sectionIndex) else { fatalError("Unknown section") }
+            
+            switch section {
+            case .users:
+                return self?.createUsers()
+            }
+        }
+        
+        let configSection = UICollectionViewCompositionalLayoutConfiguration()
+        configSection.interSectionSpacing = 16
+        layout.configuration = configSection
+        return layout
+    }
+    
+    private func createUsers() -> NSCollectionLayoutSection {
+        let spacing = CGFloat(16)
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                              heightDimension: .fractionalHeight(1))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                               heightDimension: .fractionalWidth(0.6))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                       subitem: item,
+                                                       count: 2)
+        group.interItemSpacing = .fixed(spacing)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = spacing
+        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 20, bottom: 0, trailing: 20)
+        
+        let sectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
+        return section
+    }
+    
+    private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                                       heightDimension: .estimated(1))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: sectionHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        return sectionHeader
     }
 }
 

@@ -10,17 +10,20 @@ import SwiftUI
 class ActiveChatCell: UICollectionViewCell, ConfiguringCell  {
     static var reuseId = "ActiveChatCell"
     
-    let friendImageView = UIImageView()
-    let friendName = UILabel(text: "UserName",
-                             font: .laoSangamMN20())
-    let lastMessage = UILabel(text: "Nihao!",
-                              font: .laoSangamMN18())
-    let gradientView = GradientView(from: .topTrailing,
-                                    to: .bottomLeading,
-                                    startColor: #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1),
-                                    endColor: #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
+    private let friendImageView = UIImageView()
+    private let friendName = UILabel(text: "UserName",
+                                     font: .laoSangamMN20())
+    private let lastMessage = UILabel(text: "Nihao!",
+                                      font: .laoSangamMN18())
+    private let gradientView = GradientView(from: .topTrailing,
+                                            to: .bottomLeading,
+                                            startColor: #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1),
+                                            endColor: #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
     
-    func configure(with value: MChat) {
+    func configure<U>(with value: U) where U : Hashable {
+        guard let value = value as? MChat else {
+            fatalError("Unknown U.Type for configure ActiveChatCell")
+        }
         friendImageView.image = UIImage(systemName: value.userImageString)?.withTintColor(UIColor.systemGreen, renderingMode: .alwaysOriginal)
         friendImageView.contentMode = .scaleAspectFit
         friendName.text = value.userName

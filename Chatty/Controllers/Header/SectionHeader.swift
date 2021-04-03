@@ -10,7 +10,7 @@ import UIKit
 class SectionHeader: UICollectionReusableView {
     static let reuseId = "SectionHeader"
     
-    let title = UILabel()
+    private let title = UILabel()
     
     func configure(text: String, font: UIFont?, textColor: UIColor) {
         title.text = text

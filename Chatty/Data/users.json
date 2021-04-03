@@ -1,0 +1,48 @@
+[
+    {
+        "userName": "Bob Black",
+        "avatarStringURL": "moon",
+        "id": 1
+    },
+    {
+        "userName": "Bob White",
+        "avatarStringURL": "moon",
+        "id": 2
+    },
+    {
+        "userName": "Bob Pink",
+        "avatarStringURL": "moon",
+        "id": 3
+    },
+    {
+        "userName": "Bob Orange",
+        "avatarStringURL": "moon",
+        "id": 4
+    },
+    {
+        "userName": "Bob Green",
+        "avatarStringURL": "sun.min",
+        "id": 5
+    },
+    {
+        "userName": "Bob Yellow",
+        "avatarStringURL": "snow",
+        "id": 6
+    },
+    {
+        "userName": "Bob Green",
+        "avatarStringURL": "tornado",
+        "id": 7
+    },
+    {
+        "userName": "Bob Green",
+        "avatarStringURL": "gamecontroller",
+        "id": 8
+    },
+    {
+        "userName": "Bob Green",
+        "avatarStringURL": "person.fill",
+        "id": 9
+    }
+]
+
