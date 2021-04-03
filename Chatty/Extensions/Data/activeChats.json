@@ -1,0 +1,56 @@
+[
+    {
+        "userName": "Bob Black",
+        "userImageString": "moon",
+        "lastMessage": "Nihao!",
+        "id": 1
+    },
+    {
+        "userName": "Bob White",
+        "userImageString": "cloud.fill",
+        "lastMessage": "Hello!",
+        "id": 2
+    },
+    {
+        "userName": "Bob Pink",
+        "userImageString": "person.fill",
+        "lastMessage": "Hallo!",
+        "id": 3
+    },
+    {
+        "userName": "Bob Orange",
+        "userImageString": "wind",
+        "lastMessage": "Привет!",
+        "id": 4
+    },
+    {
+        "userName": "Bob Green",
+        "userImageString": "sun.min",
+        "lastMessage": "Hi!",
+        "id": 5
+    },
+    {
+        "userName": "Bob Yellow",
+        "userImageString": "snow",
+        "lastMessage": "H!",
+        "id": 6
+    },
+    {
+        "userName": "Bob Green",
+        "userImageString": "tornado",
+        "lastMessage": "2Hi!",
+        "id": 7
+    },
+    {
+        "userName": "Bob Green",
+        "userImageString": "gamecontroller",
+        "lastMessage": "3Hi!",
+        "id": 8
+    },
+    {
+        "userName": "Bob Green",
+        "userImageString": "person.fill",
+        "lastMessage": "4Hi!",
+        "id": 9
+    }
+]

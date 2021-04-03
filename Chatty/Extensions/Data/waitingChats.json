@@ -1,0 +1,45 @@
+[
+    {
+        "userName": "Kate Black",
+        "userImageString": "person.fill",
+        "lastMessage": "Nihao111!",
+        "id": 11
+    },
+    {
+        "userName": "Kate White",
+        "userImageString": "keyboard",
+        "lastMessage": "Hello!111",
+        "id": 21
+    },
+    {
+        "userName": "Kate Pink",
+        "userImageString": "printer.dotmatrix",
+        "lastMessage": "Hallo!1111",
+        "id": 31
+    },
+    {
+        "userName": "Kate Orange",
+        "userImageString": "scanner",
+        "lastMessage": "Привет111!111",
+        "id": 41
+    },
+    {
+        "userName": "Kate Green",
+        "userImageString": "tv",
+        "lastMessage": "Hi1!1",
+        "id": 51
+    },
+    {
+        "userName": "Kate Orange",
+        "userImageString": "car",
+        "lastMessage": "Привет111!111",
+        "id": 61
+    },
+    {
+        "userName": "Kate Orange",
+        "userImageString": "figure.walk",
+        "lastMessage": "Привет111!111",
+        "id": 71
+    }
+]
+
