@@ -31,6 +31,9 @@
 		73A1ECD626184DB6008F8B8E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1ECD526184DB6008F8B8E /* GradientView.swift */; };
 		73A1ECD9261853CC008F8B8E /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1ECD8261853CC008F8B8E /* WaitingChatCell.swift */; };
 		73A1ECDC2618553F008F8B8E /* ConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A1ECDB2618553F008F8B8E /* ConfiguringCell.swift */; };
+		73A978AE2618BA2F00A64E44 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A978AD2618BA2F00A64E44 /* ProfileViewController.swift */; };
+		73A978B12618C82800A64E44 /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A978B02618C82800A64E44 /* InsertableTextField.swift */; };
+		73A978B42618D41B00A64E44 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A978B32618D41B00A64E44 /* UIImageView + Extension.swift */; };
 		73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D7C21626124A340008EF74 /* UIStackView + Extension.swift */; };
 		73EBF6C6260B5B140041DD07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C5260B5B140041DD07 /* AppDelegate.swift */; };
 		73EBF6C8260B5B140041DD07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EBF6C7260B5B140041DD07 /* SceneDelegate.swift */; };
@@ -67,6 +70,9 @@
 		73A1ECD526184DB6008F8B8E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		73A1ECD8261853CC008F8B8E /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		73A1ECDB2618553F008F8B8E /* ConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguringCell.swift; sourceTree = "<group>"; };
+		73A978AD2618BA2F00A64E44 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		73A978B02618C82800A64E44 /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		73A978B32618D41B00A64E44 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		73D7C21626124A340008EF74 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		73EBF6C2260B5B140041DD07 /* Chatty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EBF6C5260B5B140041DD07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 				730BE9B426122E3600F13A74 /* UIColor + Extension.swift */,
 				730882F52618939000D8479B /* UIViewController + Extension.swift */,
 				7366CA8D26139C4500F7F02C /* UISegmentedControl + Extension.swift */,
+				73A978B32618D41B00A64E44 /* UIImageView + Extension.swift */,
 				730BE9B126122D4100F13A74 /* UIFont + Extension.swift */,
 				736C7BD12612297A0060346C /* UIButton + Extension.swift */,
 				73D7C21626124A340008EF74 /* UIStackView + Extension.swift */,
@@ -111,6 +118,7 @@
 				730BE9C5261242DE00F13A74 /* ButtonFormView.swift */,
 				73F1A5FA2613618F00C40FB8 /* OneLineTextField.swift */,
 				73A1ECD526184DB6008F8B8E /* GradientView.swift */,
+				73A978B02618C82800A64E44 /* InsertableTextField.swift */,
 				7366CA8926138BD600F7F02C /* AddPhotoView.swift */,
 				737A93A726174584008A9CEE /* Bundle Decodable.swift */,
 				730BE9BD26123D6B00F13A74 /* UIKit */,
@@ -163,6 +171,7 @@
 				737A93A026170E70008A9CEE /* MainTabBarController.swift */,
 				737A939B26170A64008A9CEE /* ConversationViewController.swift */,
 				737A93A426170EDA008A9CEE /* PeopleViewController.swift */,
+				73A978AD2618BA2F00A64E44 /* ProfileViewController.swift */,
 				73F60448261872E700593B2E /* Header */,
 				737A93B62617659C008A9CEE /* Cell */,
 			);
@@ -312,6 +321,7 @@
 				731B3C9026137330006E1A66 /* LoginViewController.swift in Sources */,
 				730BE9B526122E3600F13A74 /* UIColor + Extension.swift in Sources */,
 				73A1ECDC2618553F008F8B8E /* ConfiguringCell.swift in Sources */,
+				73A978B12618C82800A64E44 /* InsertableTextField.swift in Sources */,
 				737A93A826174584008A9CEE /* Bundle Decodable.swift in Sources */,
 				730882F32618915100D8479B /* UserCell.swift in Sources */,
 				737A93B426176578008A9CEE /* ActiveChatCell.swift in Sources */,
@@ -321,6 +331,7 @@
 				730882F62618939000D8479B /* UIViewController + Extension.swift in Sources */,
 				737A93A526170EDA008A9CEE /* PeopleViewController.swift in Sources */,
 				737A93A126170E70008A9CEE /* MainTabBarController.swift in Sources */,
+				73A978AE2618BA2F00A64E44 /* ProfileViewController.swift in Sources */,
 				73F6044C2618738F00593B2E /* MChat.swift in Sources */,
 				737FDBB326135CD0008F3519 /* SignUpViewController.swift in Sources */,
 				7366CA8E26139C4500F7F02C /* UISegmentedControl + Extension.swift in Sources */,
@@ -330,6 +341,7 @@
 				7366CA8726138A2700F7F02C /* SetupProfileViewController.swift in Sources */,
 				73A1ECD9261853CC008F8B8E /* WaitingChatCell.swift in Sources */,
 				7366CA8A26138BD600F7F02C /* AddPhotoView.swift in Sources */,
+				73A978B42618D41B00A64E44 /* UIImageView + Extension.swift in Sources */,
 				730BE9C6261242DE00F13A74 /* ButtonFormView.swift in Sources */,
 				73D7C21726124A340008EF74 /* UIStackView + Extension.swift in Sources */,
 				732092342618664B00BB19C2 /* SectionHeader.swift in Sources */,

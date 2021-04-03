@@ -16,7 +16,7 @@ class WaitingChatCell: UICollectionViewCell, ConfiguringCell {
         guard let value = value as? MChat else {
             fatalError("Unknown U.Type for configure WaitingChatCell")
         }
-        friendImageView.image = UIImage(systemName: value.userImageString)?.withTintColor(UIColor.systemBlue, renderingMode: .alwaysOriginal)
+        friendImageView.image = UIImage(named: value.userImageString)
         friendImageView.contentMode = .scaleAspectFit
     }
     

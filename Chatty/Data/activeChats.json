@@ -1,56 +1,62 @@
 [
     {
         "userName": "Bob Black",
-        "userImageString": "moon",
+        "userImageString": "human1",
         "lastMessage": "Nihao!",
         "id": 1
     },
     {
         "userName": "Bob White",
-        "userImageString": "cloud.fill",
+        "userImageString": "human2",
         "lastMessage": "Hello!",
         "id": 2
     },
     {
         "userName": "Bob Pink",
-        "userImageString": "person.fill",
+        "userImageString": "human3",
         "lastMessage": "Hallo!",
         "id": 3
     },
     {
         "userName": "Bob Orange",
-        "userImageString": "wind",
+        "userImageString": "human4",
         "lastMessage": "Привет!",
         "id": 4
     },
     {
         "userName": "Bob Green",
-        "userImageString": "sun.min",
+        "userImageString": "human5",
         "lastMessage": "Hi!",
         "id": 5
     },
     {
         "userName": "Bob Yellow",
-        "userImageString": "snow",
+        "userImageString": "human6",
         "lastMessage": "H!",
         "id": 6
     },
     {
         "userName": "Bob Green",
-        "userImageString": "tornado",
+        "userImageString": "human7",
         "lastMessage": "2Hi!",
         "id": 7
     },
     {
         "userName": "Bob Green",
-        "userImageString": "gamecontroller",
+        "userImageString": "human8",
         "lastMessage": "3Hi!",
         "id": 8
     },
     {
         "userName": "Bob Green",
-        "userImageString": "person.fill",
+        "userImageString": "human9",
         "lastMessage": "4Hi!",
         "id": 9
+    },
+    {
+        "userName": "Bob Green",
+        "userImageString": "human10",
+        "lastMessage": "4Hi!",
+        "id": 10
     }
 ]

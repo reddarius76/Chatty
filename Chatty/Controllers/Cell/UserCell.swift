@@ -18,7 +18,7 @@ class UserCell: UICollectionViewCell, ConfiguringCell {
         guard let value = value as? User else {
             fatalError("Unknown U.Type for configure UserCell")
         }
-        userImageView.image = UIImage(systemName: value.avatarStringURL)?.withTintColor(UIColor.systemGreen, renderingMode: .alwaysOriginal)
+        userImageView.image = UIImage(named: value.avatarStringURL)
         userImageView.contentMode = .scaleAspectFit
         userName.text = value.userName
     }
